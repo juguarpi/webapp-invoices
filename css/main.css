@@ -31,8 +31,7 @@
 
 html {
   font-size: 62.5%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 @media only screen and (max-width: 600px) {
@@ -49,8 +48,7 @@ html {
 
 body {
   font-family: "Nunito Sans", sans-serif;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .mg-bt-2rem {
@@ -62,18 +60,13 @@ body {
 }
 
 .grid-in-row {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 5fr 2.5fr 2.5fr 2.5fr 0.5fr;
-      grid-template-columns: 5fr 2.5fr 2.5fr 2.5fr 0.5fr;
+  grid-template-columns: 5fr 2.5fr 2.5fr 2.5fr 0.5fr;
   gap: 1rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .grid-in-column {
-  display: -ms-grid;
   display: grid;
   gap: 0.8rem;
 }
@@ -172,13 +165,11 @@ body {
 }
 
 .btn:hover {
-  -webkit-transform: translateY(-0.3rem);
-          transform: translateY(-0.3rem);
+  transform: translateY(-0.3rem);
 }
 
 .btn:active {
-  -webkit-transform: translateY(-0.1rem);
-          transform: translateY(-0.1rem);
+  transform: translateY(-0.1rem);
 }
 
 .btn--hide {
@@ -295,15 +286,9 @@ select:focus {
 }
 
 .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   background-color: var(--background-color-lighter);
   padding: 2rem 2rem;
 }
@@ -315,14 +300,13 @@ select:focus {
 
 .content {
   position: relative;
-  min-height: 120vh;
+  min-height: 150vh;
   overflow: hidden;
   background-color: var(--background-color);
 }
 
 .content-invoices-page1 {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   position: absolute;
   top: 0;
   left: 0;
@@ -330,7 +314,6 @@ select:focus {
   min-height: 100%;
   padding: 3rem 4rem;
   background-color: var(--background-color);
-  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
@@ -345,15 +328,10 @@ select:focus {
 }
 
 .invoices__header-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin-bottom: 6rem;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .invoices__header-box .invoices__total-number-box {
@@ -366,9 +344,7 @@ select:focus {
 
 @media only screen and (max-width: 600px) {
   .invoices__header-box .invoices__filter-bar-box {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    order: 1;
     width: 100%;
     margin-top: 2rem;
   }
@@ -377,12 +353,8 @@ select:focus {
 .invoices__header-box .invoices__filter-bar-box .btn-invoices__filter-bar {
   min-width: 16rem;
   background-color: var(--background-color-lighter-ex);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 @media only screen and (max-width: 600px) {
@@ -398,7 +370,6 @@ select:focus {
   left: 1rem;
   opacity: 0;
   background-color: var(--background-color-lighter);
-  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
@@ -420,57 +391,36 @@ select:focus {
   background-color: var(--background-color-lighter);
   padding: 0.5rem 1rem 0.5rem 2rem;
   border-radius: 1rem;
-  display: -ms-grid;
   display: grid;
   margin-bottom: 2.5rem;
-  -ms-grid-columns: 1.3fr 1fr 0.8fr 1fr 0.8fr 0.2fr;
-      grid-template-columns: 1.3fr 1fr 0.8fr 1fr 0.8fr 0.2fr;
+  grid-template-columns: 1.3fr 1fr 0.8fr 1fr 0.8fr 0.2fr;
   gap: 2rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   cursor: pointer;
 }
 
 @media only screen and (max-width: 800px) {
   .invoices__list-item {
-    -ms-grid-columns: 1.3fr 1.3fr 1.3fr 0.8fr 0.2fr;
-        grid-template-columns: 1.3fr 1.3fr 1.3fr 0.8fr 0.2fr;
+    grid-template-columns: 1.3fr 1.3fr 1.3fr 0.8fr 0.2fr;
     gap: 1rem;
-        grid-template-areas: "a b c d e" "a f c d e";
+    grid-template-areas: "a b c d e" "a f c d e";
   }
   .invoices__list-item .invoices__list-item-sn {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
-    -ms-grid-column: 1;
     grid-area: a;
   }
   .invoices__list-item .invoices__list-item-due-date {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
     grid-area: b;
   }
   .invoices__list-item .invoices__list-item-clientname {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
     grid-area: f;
   }
   .invoices__list-item .invoices__list-item-amount {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
-    -ms-grid-column: 3;
     grid-area: c;
   }
   .invoices__list-item .invoices__list-item-status {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
-    -ms-grid-column: 4;
     grid-area: d;
   }
   .invoices__list-item .invoices__list-item-rightarrow {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
-    -ms-grid-column: 5;
     grid-area: e;
   }
 }
@@ -478,52 +428,35 @@ select:focus {
 @media only screen and (max-width: 400px) {
   .invoices__list-item {
     padding: 0.5rem 1rem 0.5rem 4rem;
-    -ms-grid-columns: 1fr 1fr 0.2fr;
-        grid-template-columns: 1fr 1fr 0.2fr;
-        grid-template-areas: "a f  e" "b . e" "c d  e";
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    grid-template-columns: 1fr 1fr 0.2fr;
+    grid-template-areas: "a f  e" "b . e" "c d  e";
+    align-items: center;
   }
   .invoices__list-item .invoices__list-item-sn {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
     grid-area: a;
   }
   .invoices__list-item .invoices__list-item-due-date {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
     grid-area: b;
   }
   .invoices__list-item .invoices__list-item-clientname {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
     grid-area: f;
     text-align: right;
     font-size: 1.8rem;
   }
   .invoices__list-item .invoices__list-item-amount {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
     grid-area: c;
     text-align: left;
   }
   .invoices__list-item .invoices__list-item-status {
-    -ms-grid-row: 3;
-    -ms-grid-column: 2;
     grid-area: d;
   }
   .invoices__list-item .invoices__list-item-rightarrow {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 3;
-    -ms-grid-column: 3;
     grid-area: e;
   }
 }
 
 .invoices__list-item:hover {
-  -webkit-transform: translateY(-0.2rem);
-          transform: translateY(-0.2rem);
+  transform: translateY(-0.2rem);
   background-color: var(--background-color-lighter-ex);
 }
 
@@ -532,20 +465,17 @@ select:focus {
 }
 
 .invoices__list-item:active {
-  -webkit-transform: translateY(0rem);
-          transform: translateY(0rem);
+  transform: translateY(0rem);
 }
 
 .content-invoice-page2 {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   position: absolute;
   top: 0;
   left: 100%;
   width: 100%;
   padding: 3rem 4rem;
   background-color: var(--background-color);
-  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
@@ -563,35 +493,22 @@ select:focus {
   padding: 1rem 2rem;
   background-color: var(--background-color-lighter);
   border-radius: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   margin: 1rem 0 2rem 0;
 }
 
 @media only screen and (max-width: 600px) {
   .invoice__header-box {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .invoice__header-box .invoice__buttons-box {
     width: 100%;
     margin-top: 2rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
 }
 
@@ -602,15 +519,9 @@ select:focus {
 }
 
 .inovice__content-box .invoice__content-part-1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  justify-content: space-between;
+  align-items: flex-start;
   margin-bottom: 3rem;
 }
 
@@ -619,22 +530,15 @@ select:focus {
 }
 
 .inovice__content-box .invoice__content-part-2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  justify-content: space-between;
+  align-items: flex-start;
   margin-bottom: 3rem;
 }
 
 @media only screen and (max-width: 600px) {
   .inovice__content-box .invoice__content-part-2 {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   .inovice__content-box .invoice__content-part-2 .invoice__sent-to-box {
     margin-top: 2rem;
@@ -643,18 +547,10 @@ select:focus {
 
 .inovice__content-box .invoice__content-part-2 .invoice__dates-box {
   height: 12rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .inovice__content-box .invoice-content-part-3 {
@@ -689,15 +585,9 @@ select:focus {
 .inovice__content-box .invoice-content-part-3 .table-end {
   padding: 2rem;
   background-color: var(--background-color-darker);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .new-invoice__overlay,
@@ -710,7 +600,6 @@ select:focus {
   opacity: 0;
   width: 100%;
   z-index: -1;
-  -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
 }
 
@@ -757,148 +646,107 @@ select:focus {
 .new-invoice__overlay .invoice__outer-box .invoice__inner-box .bill-from-table,
 .edit-invoice__overlay .invoice__outer-box .invoice__inner-box .bill-from-table {
   width: 100%;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(0, 1fr))[3];
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      grid-template-areas: "address address address" "city post-code country";
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-areas: "address address address" "city post-code country";
   gap: 1.5rem;
 }
 
 .new-invoice__overlay .invoice__outer-box .invoice__inner-box .bill-from-table .bill-from-address,
 .edit-invoice__overlay .invoice__outer-box .invoice__inner-box .bill-from-table .bill-from-address {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   grid-area: address;
 }
 
 .new-invoice__overlay .invoice__outer-box .invoice__inner-box .bill-from-table .bill-from-city,
 .edit-invoice__overlay .invoice__outer-box .invoice__inner-box .bill-from-table .bill-from-city {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
   grid-area: city;
 }
 
 .new-invoice__overlay .invoice__outer-box .invoice__inner-box .bill-from-table .bill-from-post-code,
 .edit-invoice__overlay .invoice__outer-box .invoice__inner-box .bill-from-table .bill-from-post-code {
-  -ms-grid-row: 4;
-  -ms-grid-column: 2;
   grid-area: post-code;
 }
 
 .new-invoice__overlay .invoice__outer-box .invoice__inner-box .bill-from-table .bill-from-country,
 .edit-invoice__overlay .invoice__outer-box .invoice__inner-box .bill-from-table .bill-from-country {
-  -ms-grid-row: 4;
-  -ms-grid-column: 3;
   grid-area: country;
 }
 
 .new-invoice__overlay .invoice__outer-box .invoice__inner-box .bill-to-table,
 .edit-invoice__overlay .invoice__outer-box .invoice__inner-box .bill-to-table {
   width: 100%;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(0, 1fr))[3];
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      grid-template-areas: "client-name client-name client-name" "client-email client-email client-email" "address address address" "city post-code country";
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-areas: "client-name client-name client-name" "client-email client-email client-email" "address address address" "city post-code country";
   gap: 1.5rem;
 }
 
 .new-invoice__overlay .invoice__outer-box .invoice__inner-box .bill-to-table .bill-to-client-name,
 .edit-invoice__overlay .invoice__outer-box .invoice__inner-box .bill-to-table .bill-to-client-name {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   grid-area: client-name;
 }
 
 .new-invoice__overlay .invoice__outer-box .invoice__inner-box .bill-to-table .bill-to-client-email,
 .edit-invoice__overlay .invoice__outer-box .invoice__inner-box .bill-to-table .bill-to-client-email {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   grid-area: client-email;
 }
 
 .new-invoice__overlay .invoice__outer-box .invoice__inner-box .bill-to-table .bill-to-address,
 .edit-invoice__overlay .invoice__outer-box .invoice__inner-box .bill-to-table .bill-to-address {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   grid-area: address;
 }
 
 .new-invoice__overlay .invoice__outer-box .invoice__inner-box .bill-to-table .bill-to-city,
 .edit-invoice__overlay .invoice__outer-box .invoice__inner-box .bill-to-table .bill-to-city {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
   grid-area: city;
 }
 
 .new-invoice__overlay .invoice__outer-box .invoice__inner-box .bill-to-table .bill-to-post-code,
 .edit-invoice__overlay .invoice__outer-box .invoice__inner-box .bill-to-table .bill-to-post-code {
-  -ms-grid-row: 4;
-  -ms-grid-column: 2;
   grid-area: post-code;
 }
 
 .new-invoice__overlay .invoice__outer-box .invoice__inner-box .bill-to-table .bill-to-country,
 .edit-invoice__overlay .invoice__outer-box .invoice__inner-box .bill-to-table .bill-to-country {
-  -ms-grid-row: 4;
-  -ms-grid-column: 3;
   grid-area: country;
 }
 
 .new-invoice__overlay .invoice__outer-box .invoice__inner-box .diescription-table,
 .edit-invoice__overlay .invoice__outer-box .invoice__inner-box .diescription-table {
   width: 100%;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(0, 1fr))[2];
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      grid-template-areas: "invoice-date payment-term " "description description";
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-areas: "invoice-date payment-term " "description description";
   gap: 1.5rem;
 }
 
 .new-invoice__overlay .invoice__outer-box .invoice__inner-box .diescription-table .invoice-date,
 .edit-invoice__overlay .invoice__outer-box .invoice__inner-box .diescription-table .invoice-date {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: invoice-date;
 }
 
 .new-invoice__overlay .invoice__outer-box .invoice__inner-box .diescription-table .invoice-payment-term,
 .edit-invoice__overlay .invoice__outer-box .invoice__inner-box .diescription-table .invoice-payment-term {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
   grid-area: payment-term;
 }
 
 .new-invoice__overlay .invoice__outer-box .invoice__inner-box .diescription-table .invoice-project-description,
 .edit-invoice__overlay .invoice__outer-box .invoice__inner-box .diescription-table .invoice-project-description {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: description;
 }
 
 .new-invoice__overlay .invoice__outer-box .item-list-box,
 .edit-invoice__overlay .invoice__outer-box .item-list-box {
-  display: -ms-grid;
   display: grid;
   gap: 1.5rem;
 }
 
 .new-invoice__overlay .invoice__outer-box .new-invoice__buttons-box,
 .edit-invoice__overlay .invoice__outer-box .new-invoice__buttons-box {
-  position: -webkit-sticky;
   position: sticky;
   bottom: 0;
   background-color: var(--background-color-lighter);
   padding: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   border-radius: 1rem;
 }
@@ -912,11 +760,7 @@ select:focus {
 .edit-invoice__buttons-box {
   margin-top: 2rem;
   padding: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
 }
 /*# sourceMappingURL=main.css.map */
