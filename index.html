@@ -1,0 +1,427 @@
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+    <link type="text/css" rel="stylesheet" href="fontstyle.css">
+
+    <title>Invoice App</title>
+</head>
+<body>
+   <main class="app">
+        <header class="header">
+            <span class="icon-globe logo">o.</span>
+            <h1 class="heading-1"> </span> Invoices System</h1>
+            <button class="btn btn--light-mode btn-text-2"><span class="icon-moon"> </span><span class="light-btn-text">Light Mode</span></button>
+        </header>
+        <div class="content">
+            <div class="content-invoices-page1">
+                <div class="invoices__header-box">
+                    <div class="invoices__total-number-box">
+                        <h2 class="heading-2">Invoices</h2>
+                        <p class="text-1 invoices__total-number-text"> There are total <span class="invoices__total-number">7</span> invoices</p>
+                    </div>
+                
+                    <div class="invoices__filter-bar-box mg-right-2rem">
+                        <button class="btn btn-invoices__filter-bar btn-text-2">
+                            <span class="invoices__filter-bar-text">Filter by Status</span>
+                            <span class="invoices__filter-bar-down-arrow icon-filter" ></span>  
+                        </button>
+                        <div class="invoices__filter-droplist ">
+                            <p class="text-2 invoices__filter-droplist-item" data-status="All">All</p>
+                            <p class="text-2 invoices__filter-droplist-item" data-status="Paid">Paid</p>
+                            <p class="text-2 invoices__filter-droplist-item" data-status="Pending">Pending</p>
+                            <p class="text-2 invoices__filter-droplist-item" data-status="Draft">Draft</p>
+                        </div>
+                    </div>
+
+                    <button class="btn btn--creat-new-invoice btn-text-2">
+                        <span class="cross-sign icon-new-message"></span>
+                        <span> New Invoice </span>
+                    </button>
+                </div>
+
+                <div class="invoices__list">
+                    <!-- <div class="invoices__list-item" data-sn="RT3010">
+                        <span class="text-2 invoices__list-item-sn"># RT3010</span>
+                        <span class="text-1 invoices__list-item-due-date">19-Feb-2021</span>
+                        <span class="text-1 invoices__list-item-clientname">Jack Ong</span>
+                        <span class="text-3 invoices__list-item-amount"> S$ 4,000</span>
+                        <span class="status invoices__list-item-status">* Paid</span>
+                        <span class="invoices__list-item-rightarrow">&#5125;</span>
+                    </div>
+
+                    <div class="invoices__list-item">
+                        <span class="text-2 invoices__list-item-sn"># RT30102</span>
+                        <span class="text-1 invoices__list-item-due-date">19-Aug-2021</span>
+                        <span class="text-1 invoices__list-item-client-name">Willam Tung</span>
+                        <span class="text-3 invoices__list-item-amount"> S$ 12,000</span>
+                        <span class="status invoices__list-item-status">* Pending</span>
+                        <span class="invoices__list-item-rightarrow">&#5125;</span>
+                    </div> -->
+                </div>
+
+                
+
+                <div class="new-invoice__overlay">
+                    <div class="invoice__outer-box">
+                        <div class="invoice__inner-box">
+                            <h2 class="heading-2 mg-bt-2rem">New Invoice</h2>
+                            <div class="bill-from-box mg-bt-2rem">
+                                <p class="text-4">Bill From</p>
+                                <div class="bill-from-table">
+                                    <div class="bill-from-address">
+                                        <p class="text-1">Street Address</p>
+                                        <input type="text" class="bill-from-address-input text-2">
+                                    </div>
+
+                                    <div class="bill-from-city">
+                                        <p class="text-1">City</p>
+                                        <input type="text" class="bill-from-city-input text-2">
+                                    </div>
+
+                                    <div class="bill-from-post-code">
+                                        <p class="text-1">Post Code</p>
+                                        <input type="text" class="bill-from-post-code-input text-2">
+                                    </div>
+
+                                    <div class="bill-from-country">
+                                        <p class="text-1">Country</p>
+                                        <input type="text" class="bill-from-country-input text-2">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bill-to-box mg-bt-2rem">
+                                <p class="text-4">Bill to</p>
+                                <div class="bill-to-table">
+                                    <div class="bill-to-client-name">
+                                        <p class="text-1">Client's Name</p>
+                                        <input type="text" class="bill-to-client-name-input text-2">
+                                    </div>
+
+                                    <div class="bill-to-client-email">
+                                        <p class="text-1">Client's Email</p>
+                                        <input type="text" class="bill-to-client-email-input text-2">
+                                    </div>
+
+                                    <div class="bill-to-address">
+                                        <p class="text-1">Street Address</p>
+                                        <input type="text" class="bill-to-address-input text-2">
+                                    </div>
+
+                                    <div class="bill-to-city">
+                                        <p class="text-1">City</p>
+                                        <input type="text" class="bill-to-city-input text-2">
+                                    </div>
+
+                                    <div class="bill-to-post-code">
+                                        <p class="text-1">Post Code</p>
+                                        <input type="text" class="bill-to-post-code-input text-2">
+                                    </div>
+
+                                    <div class="bill-to-country">
+                                        <p class="text-1">Country</p>
+                                        <input type="text" class="bill-to-country-input text-2">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="description-box mg-bt-2rem">
+                                <div class="diescription-table">
+                                    <div class="invoice-date">
+                                        <p class="text-1">Invoice Date</p>
+                                        <input type="date" class="invoice-date-input text-2">
+                                    </div>
+
+                                    <div class="invoice-payment-term">
+                                        <p class="text-1">Payment Terms</p>
+                                        <select name="pt" id="pt" class="invoice-payment-term-input text-2">
+                                            <option value="30">Net 30 days</option>
+                                            <option value="15">Net 15 days</option>
+                                            <option value="60">Net 60 days</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="invoice-project-description">
+                                        <p class="text-1">Project Description</p>
+                                        <input type="text" class="invoice-project-description-input text-2">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item-list-box">
+                                <p class="text-3">Item List</p>
+                                <div class="description-table grid-in-column">
+                                    <div class="description-table-header-row grid-in-row">
+                                        <p class="text-1">Item Name</p>
+                                        <p class="text-1">Qty</p>
+                                        <p class="text-1">Price (S$)</p>
+                                        <p class="text-1">Total (S$)</p>
+                                        <p class="text-1"> </p>
+                                    </div>
+                                    <div class="item-breakdowns grid-in-column">
+                                        <!-- <div class="description-table-item-row grid-in-row" data-index="0">
+                                            <input type="text" class="item-name-input text-2">
+                                            <input type="number" class="item-qty-input text-2">
+                                            <input type="number" class="item-price-input text-2">
+                                            <p class="item-total-price text-2">156</p>
+                                            <button class="btn btn--new-inovice-item-delete btn-text-2" >svg</button>
+                                        </div>
+                                        <div class="description-table-item-row grid-in-row">
+                                            <input type="text" class="item-name-input text-2">
+                                            <input type="number" class="item-qty-input text-2">
+                                            <input type="number" class="item-price-input text-2">
+                                            <p class="item-total-price text-2">156</p>
+                                            <button class="btn btn--new-inovice-item-delete btn-text-2" >svg</button>
+                                        </div>
+                                        <div class="description-table-item-row grid-in-row">
+                                            <input type="text" class="item-name-input text-2">
+                                            <input type="number" class="item-qty-input text-2">
+                                            <input type="number" class="item-price-input text-2">
+                                            <p class="item-total-price text-2">156</p>
+                                            <button class="btn btn--new-inovice-item-delete btn-text-2" >svg</button>
+                                        </div> -->
+                                    </div> 
+                                    <button class="btn btn--invoice-item-add-new btn-text-2"><span class="icon-squared-plus"> </span>Add New Item</button>   
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="new-invoice__buttons-box">
+                            <button class="btn btn--invoice-discard btn-text-1"><span class="icon-cancel-circle"> </span>Dischard</button> 
+                            <button class="btn btn--invoice-save-draft btn-text-2"><span class="icon-download"> </span>Save as Draft</button> 
+                            <button class="btn btn--invoice-save-send btn-text-2"><span class="icon-paper-plane"> </span>Save & Send</button> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-invoice-page2">
+                <button class="btn btn--go-back btn-text-2"> <span class= "leftarrow"> &#5130; </span> <span>Go Back</span></button>
+
+                <div class="invoice__header-box">
+                    <div class="invoice__status-box">
+                        <span class="text-1">Status: </span>
+                        <span class="status invoice__status">*Pending</span>
+                    </div>
+
+                    <div class="invoice__buttons-box">
+                        <button class="btn btn--edit btn-text-2"><span class="icon-new-message"> </span>Edit</button>
+                        <button class="btn btn--delete btn-text-2"> <span class="icon-bin"> </span>Delete</button>
+                        <button class="btn btn--markaspaid btn-text-2"> <span class="icon-checkmark"> </span> Mark as Paid</button>
+                    </div>
+                </div>
+                <div class="inovice__content-box">
+                    <div class="invoice__content-part-1">
+                        <div class="invoice__sn-box">
+                        <p class="invoice__sn text-3"># RT30102 </p>
+                        <p class="invoice__description text-1">Graphic Design </p>
+                        </div>
+
+                        <div class="invoice__from-address-box">
+                            <p class="invoice__from-address-street text-1">19 Union Terrence </p>
+                            <p class="invoice__from-address-city text-1">Singapore </p>
+                            <p class="invoice__from-address-postcode text-1">123456</p>
+                            <p class="invoice__from-address-country text-1">Singapore </p>
+                        </div>
+                    </div>
+
+                    <div class="invoice__content-part-2">
+                        <div class="invoice__dates-box">
+                            <div class="invoice__date-box">
+                                <p class="text-1">Invoice Date</p>
+                                <p class="invoice__date text-3">21 Aug 2021</p>
+                            </div>
+                            <div class="invoice__date-box">
+                                <p class="text-1">Payment Due</p>
+                                <p class="invoice__due-date text-3">20 Sep 2021</p>
+                            </div>
+                        </div>
+
+                        <div class="invoice__bill-to-box">
+                            <p class="text-1">Bill To</p>
+                            <p class="invoice__client-name text-3">Alex Ong</p>
+                            <div class="invoice__to-address-box">
+                                <p class="invoice__to-address-street text-1">63 Tuas Avenue </p>
+                                <p class="invoice__to-address-city text-1">Singapore </p>
+                                <p class="invoice__to-address-postcode text-1">789456</p>
+                                <p class="invoice__to-address-country text-1">Singapore </p>
+                            </div>
+                        </div>
+
+                        <div class="invoice__sent-to-box">
+                            <p class="text-1">Sent To</p>
+                            <p class="invoice__client-email text-3">Alex.Ong@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="invoice-content-part-3">
+                        <table>
+                            <!-- <tr class="text-1">
+                            <th class="item-description">Item Description</th>
+                            <th class="item-qty">QTY.</th>
+                            <th class="item-price">Price</th>
+                            <th class="item-total">Total</th>
+                            </tr> -->
+                            <!-- <tr class="text-2">
+                                <td class="item-description">Banner Desgin</td>
+                                <td class="item-qty">1</td>
+                                <td class="item-price">$123.00</td>
+                                <td class="item-total">$123.00</td>
+                            </tr>
+                            <tr class="text-2">
+                                <td class="item-description">Banner Desgin</td>
+                                <td class="item-qty">1</td>
+                                <td class="item-price">$123.00</td>
+                                <td class="item-total">$123.00</td>
+                            </tr> -->
+                        </table>
+                        <div class="table-end">
+                            <span class="text-2">Amount Due</span>
+                            <span class="invoice__total-value heading-2">$556.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="edit-invoice__overlay">
+                    <div class="invoice__outer-box">
+                        <div class="invoice__inner-box">
+                            <h2 class="heading-2 mg-bt-2rem"> Edit <span class="edit-invoice-number"> TX005</span></h2>
+                            <div class="bill-from-box mg-bt-2rem">
+                                <p class="text-4">Bill From</p>
+                                <div class="bill-from-table">
+                                    <div class="bill-from-address">
+                                        <p class="text-1">Street Address</p>
+                                        <input type="text" class="bill-from-address-input text-2">
+                                    </div>
+
+                                    <div class="bill-from-city">
+                                        <p class="text-1">City</p>
+                                        <input type="text" class="bill-from-city-input text-2">
+                                    </div>
+
+                                    <div class="bill-from-post-code">
+                                        <p class="text-1">Post Code</p>
+                                        <input type="text" class="bill-from-post-code-input text-2">
+                                    </div>
+
+                                    <div class="bill-from-country">
+                                        <p class="text-1">Country</p>
+                                        <input type="text" class="bill-from-country-input text-2">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bill-to-box mg-bt-2rem">
+                                <p class="text-4">Bill to</p>
+                                <div class="bill-to-table">
+                                    <div class="bill-to-client-name">
+                                        <p class="text-1">Client's Name</p>
+                                        <input type="text" class="bill-to-client-name-input text-2">
+                                    </div>
+
+                                    <div class="bill-to-client-email">
+                                        <p class="text-1">Client's Email</p>
+                                        <input type="text" class="bill-to-client-email-input text-2">
+                                    </div>
+
+                                    <div class="bill-to-address">
+                                        <p class="text-1">Street Address</p>
+                                        <input type="text" class="bill-to-address-input text-2">
+                                    </div>
+
+                                    <div class="bill-to-city">
+                                        <p class="text-1">City</p>
+                                        <input type="text" class="bill-to-city-input text-2">
+                                    </div>
+
+                                    <div class="bill-to-post-code">
+                                        <p class="text-1">Post Code</p>
+                                        <input type="text" class="bill-to-post-code-input text-2">
+                                    </div>
+
+                                    <div class="bill-to-country">
+                                        <p class="text-1">Country</p>
+                                        <input type="text" class="bill-to-country-input text-2">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="description-box mg-bt-2rem">
+                                <div class="diescription-table">
+                                    <div class="invoice-date">
+                                        <p class="text-1">Invoice Date</p>
+                                        <input type="date" class="invoice-date-input text-2">
+                                    </div>
+
+                                    <div class="invoice-payment-term">
+                                        <p class="text-1">Payment Terms</p>
+                                        <select name="pt" id="pt" class="invoice-payment-term-input text-2">
+                                            <option value="30">Net 30 days</option>
+                                            <option value="15">Net 15 days</option>
+                                            <option value="60">Net 60 days</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="invoice-project-description">
+                                        <p class="text-1">Project Description</p>
+                                        <input type="text" class="invoice-project-description-input text-2">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item-list-box">
+                                <p class="text-3">Item List</p>
+                                <div class="description-table grid-in-column">
+                                    <div class="description-table-header-row grid-in-row">
+                                        <p class="text-1">Item Name</p>
+                                        <p class="text-1">Qty</p>
+                                        <p class="text-1">Price</p>
+                                        <p class="text-1">Total</p>
+                                        <p class="text-1"> </p>
+                                    </div>
+                                    <div class="item-breakdowns grid-in-column">
+                                        <div class="description-table-item-row grid-in-row">
+                                            <input type="text" class="item-name-input text-2">
+                                            <input type="text" class="item-qty-input text-2">
+                                            <input type="text" class="item-price-input text-2">
+                                            <p class="item-total-price text-2">156</p>
+                                            <button class="btn btn--new-inovice-item-delete btn-text-2" >svg</button>
+                                        </div>
+                                        <div class="description-table-item-row grid-in-row">
+                                            <input type="text" class="item-name-input text-2">
+                                            <input type="text" class="item-qty-input text-2">
+                                            <input type="text" class="item-price-input text-2">
+                                            <p class="item-total-price text-2">16</p>
+                                            <button class="btn btn--new-inovice-item-delete btn-text-2" >svg</button>
+                                        </div>
+                                        <div class="description-table-item-row grid-in-row">
+                                            <input type="text" class="item-name-input text-2">
+                                            <input type="text" class="item-qty-input text-2">
+                                            <input type="text" class="item-price-input text-2">
+                                            <p class="item-total-price text-2">16</p>
+                                            <button class="btn btn--new-inovice-item-delete btn-text-2" >svg</button>
+                                        </div>
+                                    </div> 
+                                    <button class="btn btn--invoice-item-add-new btn-text-2"><span class="icon-squared-plus"> </span> Add New Item</button>   
+                                </div>
+                            </div>
+                            <div class="edit-invoice__buttons-box">
+                                <button class="btn btn--edit-invoice-cancel btn-text-2"> <span class="icon-cancel-circle"></span> Cancel</button> 
+                                <button class="btn btn--edit-invoice-savedraft btn-text-2"> <span class="icon-download"></span>Save as Draft</button> 
+                                <button class="btn btn--edit-invoice-save btn-text-2"> <span class="icon-air-plane"></span>Save & Send</button> 
+                            </div>
+                        </div>
+
+                    </div>
+                </div>                
+            </div>
+        </div>
+   </main>
+    <script src="script.js"></script>
+</body>
+</html>
+

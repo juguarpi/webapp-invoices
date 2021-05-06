@@ -1,0 +1,76 @@
+:root {
+  --text-color-2-3: hsl(0, 0%, 100%);
+  --text-color-1: hsl(0, 0%, 70%);
+  --text-color-4: hsl(220, 100%, 50%);
+  --background-color-darker: hsl(207, 29%, 14%);
+  --background-color: hsl(207, 26%, 17%);
+  --background-color-transparent: hsla(207, 29%, 14%, 0.9);
+  --background-color-lighter: hsl(209, 23%, 23%);
+  --background-color-lighter-ex: hsl(209, 19%, 32%);
+  --btn-color-blue: hsl(220, 100%, 50%);
+}
+
+[data-theme="light"] {
+  --text-color-2-3: hsl(0, 0%, 0%);
+  --text-color-1: hsl(0, 0%, 10%);
+  --text-color-4: hsl(220, 100%, 50%);
+  --background-color-darker: hsl(0, 0%, 96%);
+  --background-color: hsl(0, 0%, 86%);
+  --background-color-transparent: hsla(0, 0%, 96%, 0.9);
+  --background-color-lighter: hsl(0, 0%, 76%);
+  --background-color-lighter-ex: hsl(0, 0%, 66%);
+  --btn-color-blue: hsl(220, 100%, 50%);
+}
+
+@mixin break($x) {
+  @if $x==1200 {
+    @media only screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+  @if $x==800 {
+    @media only screen and (max-width: 800px) {
+      @content;
+    }
+  }
+
+  @if $x==600 {
+    @media only screen and (max-width: 600px) {
+      @content;
+    }
+  }
+
+  @if $x==400 {
+    @media only screen and (max-width: 400px) {
+      @content;
+    }
+  }
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+
+  // @media only screen and (max-width: 600px) {
+  //   font-size: 50%;
+  // }
+  @include break(600) {
+    font-size: 50%;
+  }
+
+  @include break(1200) {
+    font-size: 75%;
+  }
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  box-sizing: border-box;
+}

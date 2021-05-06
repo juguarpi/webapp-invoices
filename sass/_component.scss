@@ -1,0 +1,117 @@
+/////////////////////////////BUTTON///////////////////////////////
+
+.btn {
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 2rem;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-0.3rem);
+  }
+
+  &:active {
+    transform: translateY(-0.1rem);
+  }
+}
+.btn--hide {
+  display: none;
+}
+
+.btn--creat-new-invoice {
+  background-color: var(--btn-color-blue);
+  .cross-sign {
+    font-size: 1.6rem;
+  }
+}
+
+.btn--go-back {
+  .leftarrow {
+    display: inline-block;
+    margin-right: 2rem;
+  }
+}
+
+.btn--edit {
+  background-color: var(--background-color-lighter-ex);
+  margin-right: 2rem;
+}
+.btn--delete {
+  background-color: red;
+  margin-right: 2rem;
+}
+.btn--markaspaid {
+  background-color: var(--btn-color-blue);
+}
+
+.btn--new-inovice-item-delete {
+  padding: 0;
+}
+
+.btn--invoice-item-add-new {
+  background-color: var(--background-color-lighter);
+}
+
+.btn--invoice-discard {
+  background-color: var(--background-color-lighter-ex);
+  margin-right: auto;
+}
+
+.btn--invoice-save-draft {
+  background-color: var(--background-color-lighter-ex);
+}
+
+.btn--invoice-save-send {
+  background-color: var(--btn-color-blue);
+}
+
+.btn--edit-invoice-cancel {
+  background-color: var(--background-color-lighter-ex);
+  margin-right: auto;
+}
+
+.btn--edit-invoice-savedraft {
+  background-color: var(--background-color-lighter);
+}
+
+.btn--edit-invoice-save {
+  background-color: var(--btn-color-blue);
+}
+
+/////////////////////////////INPUT///////////////////////////////
+input {
+  border: none;
+  width: 100%;
+  background-color: var(--background-color-lighter);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn-- input {
+  border: none;
+  width: 100%;
+  background-color: var(--background-color-lighter);
+  padding: 0.8rem 1rem;
+  border-radius: 0.5rem;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+select {
+  border: none;
+  width: 100%;
+  background-color: var(--background-color-lighter);
+  padding: 0.7rem 1rem;
+  border-radius: 0.5rem;
+
+  &:focus {
+    outline: none;
+  }
+}

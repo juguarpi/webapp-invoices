@@ -1,0 +1,20 @@
+.mg-bt-2rem {
+  margin-bottom: 2rem;
+}
+
+.mg-right-2rem {
+  margin-right: 2rem;
+}
+
+.grid-in-row {
+  // used in itemtable in new invoice
+  display: grid;
+  grid-template-columns: 5fr 2.5fr 2.5fr 2.5fr 0.5fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.grid-in-column {
+  display: grid;
+  gap: 0.8rem;
+}
