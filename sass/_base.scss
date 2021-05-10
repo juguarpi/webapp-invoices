@@ -65,9 +65,9 @@ html {
     font-size: 50%;
   }
 
-  @include break(1200) {
-    font-size: 75%;
-  }
+  // @include break(1200) {
+  //   font-size: 75%;
+  // }
 }
 
 body {

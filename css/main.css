@@ -40,12 +40,6 @@ html {
   }
 }
 
-@media only screen and (min-width: 1200px) {
-  html {
-    font-size: 75%;
-  }
-}
-
 body {
   font-family: "Nunito Sans", sans-serif;
   box-sizing: border-box;
