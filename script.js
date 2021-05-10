@@ -91,7 +91,7 @@ class Invoice{
         if (this.invDate==="") return;
         let dueDate = new Date(this.invDate);
         dueDate.setDate(dueDate.getDate()+ Number(this.payTerm));
-        let dueDateString=dueDate.toISOString().slice(0,7);
+        let dueDateString=dueDate.toISOString().slice(0,10);
         return dueDateString; 
     }
     updateInvoice(billFrom, billTo, invDate,payTerm, description, items, status){
